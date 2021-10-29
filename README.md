@@ -1,1 +1,3 @@
-# petethepossum.github.io 2
+# petethepossum.github.io 
+
+Personal portfolio website, based on an open source bootstrap template.
