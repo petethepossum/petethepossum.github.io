@@ -15,11 +15,42 @@
     height: auto;
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3); /* Add the drop shadow */
   }
+  .download-button {
+    display: block; /* Display as block to center horizontally */
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 15px 30px; /* Larger padding to make the button bigger */
+    text-align: center;
+    text-decoration: none;
+    font-size: 18px; /* Larger font size */
+    margin-top: 20px; /* Increase top margin for spacing */
+    cursor: pointer;
+    border-radius: 5px;
+    margin: 0 auto; /* Center horizontally */
+  }
+
+  .download-button:hover {
+    background-color: #45a049;
+  }
 </style>
 </head>
 <body>
   <div class="container">
-    <img src="img/6.png" alt="Compliment image" class="image">
+    <a href="6.png" download="6.png">
+      <img src="6.png" alt="Your Image" class="image">
+    </a>
+    <br>
+    <button onclick="downloadImage()">Save Compliment!</button>
   </div>
+
+  <script>
+    function downloadImage() {
+      const link = document.createElement('a');
+      link.href = '6.png';
+      link.download = '6.png';
+      link.click();
+    }
+  </script>
 </body>
 </html>
